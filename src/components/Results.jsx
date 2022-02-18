@@ -1,8 +1,9 @@
 import React from 'react';
 
 
-const Result = () => {
-    console.log("renderización de result")
+const Result = (props) => {
+    
+    console.log("renderización de result",props)
     return (
         
         <div className="result">
