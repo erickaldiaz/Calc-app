@@ -3,11 +3,13 @@ import React from 'react';
 
 const Result = (props) => {
     
-    console.log("renderización de result",props)
+    console.log("renderización de result",props.value)
     return (
         
         <div className="result">
-            <span>0</span>
+           
+                {props.value}
+            
         </div>
     )
 }
