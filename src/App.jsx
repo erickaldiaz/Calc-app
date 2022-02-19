@@ -1,6 +1,7 @@
 import React from 'react'
-import './App.css'
+import Button from './components/Button'
 import Result from './components/Results'
+import './App.css'
 
 
 // Arrow Function
@@ -11,7 +12,7 @@ const App = () => {
     <main className='react-calculator'>
         <Result value={"0"}></Result>
         <div className="numbers">
-            <button>1</button>
+           <Button text="1"></Button>
             <button>2</button>
             <button>3</button>
             <button>4</button>
