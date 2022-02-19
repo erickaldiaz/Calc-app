@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import Result from './components/Results'
 
+
 // Arrow Function
 const App = () => {
     // Lo que ejecuta la función

@@ -1,17 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 
-const Result = (props) => {
+const Result = ({ value }) => {
     
-    console.log("renderización de result",props.value)
+    console.log("renderización de Result", value)
     return (
         
         <div className="result">
            
-                {props.value}
+                {value}
             
         </div>
     )
+}
+
+//valida que el valor q se le pasa sea un string e isrequired hace q si o si
+//se le pase un valor a result.
+Result.propTypes = {
+    value: PropTypes.string.isRequired
 }
 
 export default Result
