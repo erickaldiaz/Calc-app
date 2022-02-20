@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './components/Button'
+import Functions from './components/Functions'
 import MathOperations from './components/MathOperations'
 import Result from './components/Results'
 import './App.css'
@@ -30,14 +31,12 @@ const App = () => {
             <button>9</button>
             <button>0</button>
         </div>
-        <div className="functions">
-            <button>
-                clear
-            </button>
-            <button>
-                r
-            </button>
-        </div>
+      <Functions 
+          onContentClear= {() =>
+            console.log("Content Clear")} 
+          onDelete={()=>
+            console.log("onDelete")}>
+      </Functions>
         <MathOperations onClickOperation={operation => 
           console.log("operation:", operation)}
           onClickEqual={equal =>
