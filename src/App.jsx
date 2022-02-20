@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './components/Button'
+import MathOperations from './components/MathOperations'
 import Result from './components/Results'
 import './App.css'
 
@@ -37,13 +38,7 @@ const App = () => {
                 r
             </button>
         </div>
-        <div className="math-operations">
-            <button>+</button>
-            <button>-</button>
-            <button>*</button>
-            <button>/</button>
-            <button>=</button>
-        </div>
+        <MathOperations></MathOperations>
     </main>)
 }
 

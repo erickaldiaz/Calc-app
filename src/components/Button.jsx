@@ -11,7 +11,7 @@ const Button = ({type, text, clickHandler}) => (
             <span>{text}</span>
         </button>
 )
-
+//validaciones 
 Button.propTypes = {
     type: PropTypes.string,
     text: PropTypes.string.isRequired,
