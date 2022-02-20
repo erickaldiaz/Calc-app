@@ -6,13 +6,19 @@ import './App.css'
 
 // Arrow Function
 const App = () => {
+
+  const clickHandlerFunction = text => {
+      console.log("Button.clickHandler1", text)
+  }
+
+
     // Lo que ejecuta la función
     console.log("Renderización de App")
     return (
     <main className='react-calculator'>
         <Result value={"0"}></Result>
         <div className="numbers">
-           <Button text="1"></Button>
+          <Button text="1" clickHandler={clickHandlerFunction}></Button>
             <button>2</button>
             <button>3</button>
             <button>4</button>
