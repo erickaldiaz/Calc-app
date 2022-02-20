@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import Button from './Button'
 
 
-const Functions = ({onContentClear, onDelete}) => {
+const Functions = ({onContentClear, onDelete}) => (
     <section className="functions">
-        <Button text="" clickHandler={onContentClear}></Button>
-        <Button text="" clickHandler={onDelete}></Button>
+        <Button type="button-long-text" text="Clear" clickHandler={onContentClear}></Button>
+        <Button type="" text="&larr;" clickHandler={onDelete}></Button>
     </section>
 
-}
+)
 
 Functions.propTypes = {
     onContentClear: PropTypes.func.isRequired,

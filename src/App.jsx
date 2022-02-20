@@ -32,7 +32,7 @@ const App = () => {
             <button>0</button>
         </div>
       <Functions 
-          onContentClear= {() =>
+          onContentClear={() =>
             console.log("Content Clear")} 
           onDelete={()=>
             console.log("onDelete")}>
