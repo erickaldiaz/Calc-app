@@ -38,7 +38,8 @@ const App = () => {
                 r
             </button>
         </div>
-        <MathOperations></MathOperations>
+        <MathOperations onClickOperations={operation => 
+          console.log("operation:", operation)}></MathOperations>
     </main>)
 }
 
