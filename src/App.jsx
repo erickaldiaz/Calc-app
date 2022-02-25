@@ -29,7 +29,7 @@ const App = () => {
         <Result value={stack}></Result>
         <Numbers onClickNumber={number => {
           console.log("Click en numbers", number)
-          setStack(number)
+          setStack(`${stack}${number}`)
 
         }}>
 
