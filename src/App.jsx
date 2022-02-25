@@ -1,3 +1,4 @@
+/*eslint no-eval:0 */
 import React, { useState } from 'react'
 import Functions from './components/Functions'
 import Numbers from './components/Numbers'
@@ -39,10 +40,12 @@ const App = () => {
         } 
           }
           onDelete={() => {
-            const newStack = stack.substring(0, stack.length -1)
+            if(stack.lenght > 0) {
+                const newStack = stack.substring(0, stack.length -1)
             console.log("onDelete", newStack)
             setStack(newStack)
-          }
+              }
+            }
           }
           >
         </Functions>
@@ -52,7 +55,7 @@ const App = () => {
         }}
           onClickEqual={equal => {
               console.log("equal:", equal)
-          setStack(`${stack}${equal}`)
+          setStack(eval(stack).toString())
           }
         }
         >
