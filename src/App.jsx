@@ -8,6 +8,14 @@ import './App.css'
 
 // Arrow Function
 const App = () => {
+  const arrayTextoFuncionModificaTexto = useState("hola")
+  //arrayTextoFuncionModificaTexto =>["hola", funcion]
+
+  //1er posición valor(que inicialmente es el valor por defecto)
+  const texto = arrayTextoFuncionModificaTexto[0]
+
+  //2da posición: funcion que me va a permitir modificar el valor por defecto)
+  const funcionModificaTexto = arrayTextoFuncionModificaTexto[1]
 
     // Lo que ejecuta la función
     console.log("Renderización de App")
