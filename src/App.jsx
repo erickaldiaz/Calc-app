@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Functions from './components/Functions'
 import Numbers from './components/Numbers'
 import MathOperations from './components/MathOperations'
@@ -8,22 +8,29 @@ import './App.css'
 
 // Arrow Function
 const App = () => {
-  const arrayTextoFuncionModificaTexto = useState("hola")
-  //arrayTextoFuncionModificaTexto =>["hola", funcion]
 
+  //array destructuring 
   //1er posición valor(que inicialmente es el valor por defecto)
-  const texto = arrayTextoFuncionModificaTexto[0]
+  // const texto = arrayTextoFuncionModificaTexto[0]
+   //2da posición: funcion que me va a permitir modificar el valor por defecto)
+  // const funcionModificaTexto = arrayTextoFuncionModificaTexto[1]
 
-  //2da posición: funcion que me va a permitir modificar el valor por defecto)
-  const funcionModificaTexto = arrayTextoFuncionModificaTexto[1]
+  const [stack, setStack] = useState("")
+ 
+
+  
+
+ 
 
     // Lo que ejecuta la función
     console.log("Renderización de App")
     return (
     <main className='react-calculator'>
-        <Result value={"0"}></Result>
+        <Result value={stack}></Result>
         <Numbers onClickNumber={number => {
           console.log("Click en numbers", number)
+          setStack(number)
+
         }}>
 
         </Numbers>
