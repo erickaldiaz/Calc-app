@@ -17,12 +17,6 @@ const App = () => {
   // const funcionModificaTexto = arrayTextoFuncionModificaTexto[1]
 
   const [stack, setStack] = useState("")
- 
-
-  
-
- 
-
     // Lo que ejecuta la función
     console.log("Renderización de App")
     return (
