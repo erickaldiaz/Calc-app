@@ -1,5 +1,6 @@
 /*eslint no-eval:0 */
 import React, { useState } from 'react'
+import words from 'lodash.words'
 import Functions from './components/Functions'
 import Numbers from './components/Numbers'
 import MathOperations from './components/MathOperations'
@@ -17,11 +18,13 @@ const App = () => {
   // const funcionModificaTexto = arrayTextoFuncionModificaTexto[1]
 
   const [stack, setStack] = useState("")
+
+  const items = words(stack, /[^-^+^*^/]+/g)
     // Lo que ejecuta la función
-    console.log("Renderización de App")
+    console.log("Renderización de App", items)
     return (
     <main className='react-calculator'>
-        <Result value={stack}></Result>
+        <Result value={items[items.length -1]}></Result>
         <Numbers onClickNumber={number => {
           console.log("Click en numbers", number)
           setStack(`${stack}${number}`)
